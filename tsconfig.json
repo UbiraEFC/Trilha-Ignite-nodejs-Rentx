@@ -3,9 +3,8 @@
     "target": "es2016",                                  
     "module": "commonjs",                            
     "rootDir": "./",
-    "experimentalDecorators": true,                   
-    "emitDecoratorMetadata": true,                    
-    "baseUrl": "./src",                                  
+    "baseUrl": "./src",          
+    "outDir": "./dist",                        
     "paths": {
       "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
@@ -13,6 +12,8 @@
       "@errors/*": ["errors/*"],
       "@utils/*": ["utils/*"]
     },                                      
+    "experimentalDecorators": true,                   
+    "emitDecoratorMetadata": true,                    
     "resolveJsonModule": true,                       
     "esModuleInterop": true,                            
     "forceConsistentCasingInFileNames": true,            
