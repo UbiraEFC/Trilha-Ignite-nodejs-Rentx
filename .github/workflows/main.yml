@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{  secrets.SSH_KEY }}
-          source: "., !node_modules"
+          source: "., !node_modules, !ormconfig.json, !docker-compose.yml"
           target: "~/app/Trilha-Ignite-nodejs-Rentx"          
           
       - name: Update API
@@ -45,5 +45,4 @@ jobs:
             cd ~/app/Trilha-Ignite-nodejs-Rentx
             yarn
             ./node_modules/.bin/typeorm migration:run
-            pm2 restart rentx_api
-            
+            pm2 restart rentx_api          
